@@ -55,6 +55,7 @@ show_dashboard 2> $LOGFILE_PATH      # scripts/_dashboard.sh
 echo $SEPARATOR
 init_dirs 2> $LOGFILE_PATH           # scripts/_files.sh
 copy_files 2> $LOGFILE_PATH          # scripts/_files.sh
+edit_files 2> $LOGFILE_PATH          # scripts/_files.sh
 init_git 2> $LOGFILE_PATH            # scripts/_git.sh
 init_virtualenv 2> $LOGFILE_PATH     # scripts/_virtualenv.sh
 init_pip 2> $LOGFILE_PATH            # scripts/_virtualenv.sh

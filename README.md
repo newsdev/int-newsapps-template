@@ -1,4 +1,4 @@
-# INT NewsApps Template
+# INT News Apps Template
 
 ![screen_shot_of_it_working.png](https://user-images.githubusercontent.com/109988/28286186-5b690a8c-6b05-11e7-80ca-b7f05707bb23.png)
 
@@ -45,9 +45,9 @@ export DJANGO_SETTINGS_MODULE=config.dev.settings
 ```
 
 
-## Step 1: Start up your application
+## Step 1: Create up your application
 ```bash
-
+./go.sh -t django -n testproject
 ```
 
 ## Step 2: Set up persistence (if you need it)
