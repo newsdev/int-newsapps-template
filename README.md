@@ -1,4 +1,7 @@
 # INT NewsApps Template
+
+![screen_shot_of_it_working.png](https://user-images.githubusercontent.com/109988/28286186-5b690a8c-6b05-11e7-80ca-b7f05707bb23.png)
+
 We don't start new projects that often. But when we do, we have some opinions about how to set up your app.
 
 Currently, INT NewsApps supports:
