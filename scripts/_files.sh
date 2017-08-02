@@ -6,7 +6,7 @@ function init_dirs {
 }
 
 function copy_files {
-    echo "🚀    2a. Copying and editing files"
+    echo "🚀    2. Copying and editing files"
     cp -R $TYPE/* ../nyt-$NAME &> $LOGFILE_PATH
     mv ../nyt-$NAME/MYAPP ../nyt-$NAME/$NAME &> $LOGFILE_PATH
     cp -R common/* ../nyt-$NAME/ &> $LOGFILE_PATH
