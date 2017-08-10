@@ -12,7 +12,7 @@ It's likely that your app has special needs that aren't addressed by our templat
 
 ## Step 0: Set up your computer
 
-@sarambsimon is writing a blog post.
+@smbsimon is writing a blog post.
 
 ## Step 1: Create up your application
 ### Django
