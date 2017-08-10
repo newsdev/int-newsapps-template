@@ -16,6 +16,9 @@ function copy_files {
     "config/dev/settings.py"
     "config/stg/settings.py"
     "config/prd/settings.py"
+    "config/stg/app.ini"
+    "config/prd/app.ini"
+    "$NAME/templates/base.html"
     "README.md"
     )
 
