@@ -12,42 +12,17 @@ It's likely that your app has special needs that aren't addressed by our templat
 
 ## Step 0: Set up your computer
 
-* We use Python3 (3.6.x) to develop locally. You can install it with Homebrew.
-```bash
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew install python3
-```
-
-* We install virtualenv and virtualenvwrapper.
-```bash
-sudo pip3 install virtualenv virtualenvwrapper
-```
-
-* We set up some environment variables that are common. You can use bash (`~/.bash_profile`) or zsh (`~/.zshrc`).
-```bash
-export VIRTUALENV_PYTHON=/usr/local/bin/python3
-export VIRTUALENVWRAPPER_PYTHON=$VIRTUALENV_PYTHON
-
-export WORKON_HOME=$HOME/.v
-source /usr/local/bin/virtualenvwrapper.sh
-
-export LDFLAGS="-L/usr/local/opt/openssl/lib"
-export CPPFLAGS="-I/usr/local/opt/openssl/include"
-export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
-
-export EDITOR=nano
-
-eval $(ssh-agent) > /dev/null
-ssh-add -K ~/.ssh/*.pem
-ssh-add -K ~/.ssh/*rsa
-
-export DJANGO_SETTINGS_MODULE=config.dev.settings
-```
-
+@sarambsimon is writing a blog post.
 
 ## Step 1: Create up your application
+### Django
 ```bash
 ./go.sh -t django -n testproject
+```
+
+### Flask
+```bash
+./go.sh -t flask -n testproject
 ```
 
 ## Step 2: Set up persistence (if you need it)
