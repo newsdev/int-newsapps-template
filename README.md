@@ -12,7 +12,7 @@ It's likely that your app has special needs that aren't addressed by our templat
 
 ## Step 0: Set up your computer
 
-@smbsimon is writing a blog post.
+See our blog post [here](https://open.nytimes.com/set-up-your-mac-like-an-interactive-news-developer-bb8d2c4097e5).
 
 ## Step 1: Create up your application
 ### Django
