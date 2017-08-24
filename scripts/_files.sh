@@ -2,14 +2,14 @@
 
 function init_dirs {
     echo "🚀    1. Creating directories"
-    mkdir ../nyt-$NAME &> $LOGFILE_PATH
+    mkdir ../nyt-$NAME >> $LOGFILE_PATH 2>>&1
 }
 
 function copy_files {
     echo "🚀    2. Copying and editing files"
-    cp -R $TYPE/* ../nyt-$NAME &> $LOGFILE_PATH
-    mv ../nyt-$NAME/MYAPP ../nyt-$NAME/$NAME &> $LOGFILE_PATH
-    cp -R common/* ../nyt-$NAME/ &> $LOGFILE_PATH
+    cp -R $TYPE/* ../nyt-$NAME >> $LOGFILE_PATH 2>>&1
+    mv ../nyt-$NAME/MYAPP ../nyt-$NAME/$NAME >> $LOGFILE_PATH 2>>&1
+    cp -R common/* ../nyt-$NAME/ >> $LOGFILE_PATH 2>>&1
 
     # This is how you make an array of strings in bash.
     declare -a files_to_edit=(
