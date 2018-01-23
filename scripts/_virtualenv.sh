@@ -2,8 +2,8 @@
 
 function init_virtualenv {
     echo "🚀    4. Creating and configuring a virtualenv"
-    mkvirtualenv $NAME --python $(which python3) &> $LOGFILE_PATH
-    workon $NAME &> $LOGFILE_PATH
+    mkvirtualenv $NAME --python $(which python3) >>$LOGFILE_PATH 2>>$LOGFILE_PATH
+    workon $NAME 2>>$LOGFILE_PATH
     echo "cd $DIR/nyt-$NAME/" > "$VIRTUALENVWRAPPER_HOOK_DIR/$NAME/bin/postactivate"
     DB_NAME=_DB_NAME
     DB_USER=_DB_USER
@@ -16,5 +16,5 @@ function init_virtualenv {
 
 function init_pip {
     echo "🚀    5. Installing requirements"
-    pip install -r requirements.txt &> $LOGFILE_PATH
+    pip install -r requirements.txt >>$LOGFILE_PATH 2>>$LOGFILE_PATH
 }
