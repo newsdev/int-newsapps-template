@@ -20,17 +20,16 @@ INSTALLED_APPS = [
     'storages',
 ]
 
-MIDDLEWARE_CLASSES = [
+MIDDLEWARE = [
     'MYAPP.middleware.HealthCheckMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'pyiap.django.VerifyJWTMiddleware',
+    'pyiap.pyiap_django_middleware.VerifyJWTMiddleware',
 ]
 
 ROOT_URLCONF = 'MYAPP.urls'

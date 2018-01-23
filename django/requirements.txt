@@ -1,4 +1,4 @@
-django
+Django==2.0.1
 psycopg2
 boto
 boto3
@@ -6,4 +6,4 @@ django-storages
 djangorestframework
 django-pure-pagination
 django-localflavor
--e git+https://github.com/newsdev/nyt-pyiap.git#egg=nyt-pyiap
+-e git+https://github.com/newsdev/nyt-pyiap.git@compatible-middleware#egg=nyt_pyiap
