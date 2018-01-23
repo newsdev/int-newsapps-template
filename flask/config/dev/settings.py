@@ -11,10 +11,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'peewee.PostgresqlDatabase',
         'OPTIONS': {
-            "database": os.environ.get('DB_NAME', "MYAPP_%s" % utils.get_env()),
-            "user": os.environ.get('DB_USER', None),
-            "password": os.environ.get('DB_PASSWORD', None),
-            "host": os.environ.get('DB_HOST', None),
+            "database": os.environ.get('MYAPP_DB_NAME', "MYAPP_%s" % utils.get_env()),
+            "user": os.environ.get('MYAPP_DB_USER', None),
+            "password": os.environ.get('MYAPP_DB_PASSWORD', None),
+            "host": os.environ.get('MYAPP_DB_HOST', None),
         }
     }
 }

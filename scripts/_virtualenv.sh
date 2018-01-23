@@ -1,10 +1,17 @@
 #!/bin/bash
 
 function init_virtualenv {
-    echo "🚀    4. Creating amd configuring a virtualenv"
-    mkvirtualenv $NAME &> $LOGFILE_PATH
+    echo "🚀    4. Creating and configuring a virtualenv"
+    mkvirtualenv $NAME --python $(which python3) &> $LOGFILE_PATH
     workon $NAME &> $LOGFILE_PATH
-    echo "cd ~/src/nyt/nyt-$NAME/" > "$VIRTUALENVWRAPPER_HOOK_DIR/$NAME/bin/postactivate"
+    echo "cd $DIR/nyt-$NAME/" > "$VIRTUALENVWRAPPER_HOOK_DIR/$NAME/bin/postactivate"
+    DB_NAME=_DB_NAME
+    DB_USER=_DB_USER
+    echo "export $NAME$DB_NAME=nyt_dev_$NAME" >> "$VIRTUALENVWRAPPER_HOOK_DIR/$NAME/bin/postactivate"
+    echo "export $NAME$DB_USER=nyt_dev_$NAME" >> "$VIRTUALENVWRAPPER_HOOK_DIR/$NAME/bin/postactivate"
+    add2virtualenv .
+    add2virtualenv config
+    add2virtualenv $NAME
 }
 
 function init_pip {

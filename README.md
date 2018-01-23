@@ -25,6 +25,8 @@ See our blog post [here](https://open.nytimes.com/set-up-your-mac-like-an-intera
 ./go.sh -t flask -n testproject
 ```
 
+In either case, we are assuming your project working directory is `~/src/nyt`. If that's not true, you can also specify a directory using `-d your/directory/here`
+
 ## Step 2: Set up persistence (if you need it)
 * We use PostgreSQL 9.6.x for persistence. You can install it locally with homebrew.
 ```bash

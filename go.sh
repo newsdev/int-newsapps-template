@@ -28,12 +28,13 @@ LOGFILE_PATH="/tmp/int-newsapps-template-$NAME-$TIMESTAMP.log"
 # Loop over options passed to the script.
 # Look for t/n (type, name).
 # Assign them to variables called TYPE and NAME.
-while getopts t:n: option
+while getopts t:n:d: option
 do
  case "${option}"
  in
  t) TYPE=${OPTARG};;
  n) NAME=${OPTARG};;
+ d) DIR=${OPTARG};;
  esac
 done
 
@@ -47,6 +48,12 @@ fi
 if [[ -z $NAME ]] ; then
     printf "${FAILURE}ERROR${BASE} ${WARN}Need to specify a project name with -n.${BASE}\n"
     exit 1
+fi
+
+# If we didn't get a dir, assume ~/src/nyt/
+if [[ -z $DIR ]] ; then
+    printf "${WARN}No base directory supplied, assuming ~/src/nyt/. To specify a directory, use -d.${BASE}\n"
+    DIR="~/src/nyt"
 fi
 
 ### Run the process ###
