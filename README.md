@@ -37,8 +37,12 @@ psql -c "alter user $USER with superuser;"
 ```
 
 ## Step 3: Work on your app locally
+
+1. in project main dir, `add2virtualenv . && add2virtualenv config && add2virtualenv PROJECTNAME`
+1. make sure `export DJANGO_SETTINGS_MODULE=config.dev.settings` is in your postactivate (or is otherwise exported)
+
 ```
-TKTKTKTK
+more: TKTKTKTK
 ```
 ## Step 4: Deploy to Meta
 ```
